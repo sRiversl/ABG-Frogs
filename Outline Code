@@ -1,0 +1,22 @@
+Setup pins:
+  Set thsensor analog-in pins (6 tanks & room)
+  Set fan digital-out pins (6 tanks & room)
+  Set light digital-out pins (6 tanks)
+  Set mister-motor digital-out pin
+  Set mister-bucket analog-in pin
+  Set mister-solenoid digital-out pin
+
+Setup variable set-points:
+  Temperature values (6 tanks & room)
+  
+Poll sensors & mister-bucket inputs
+
+Add input values to list=parameters
+
+Verify list=parameters contains all values
+
+Begin controls loops:
+  Fan loop:
+  x=1
+  if list=parameters(value1) >= temp-sp OR list=parameters(value1) >= humidity-sp
+    then
